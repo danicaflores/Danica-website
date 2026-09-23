@@ -9,8 +9,43 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    @media print {
+      .site-header, .site-footer, .btn, .pill-badge {
+        display: none !important;
+      }
+      body {
+        background: #fff !important;
+        color: #111 !important;
+      }
+      .card, .skill-category {
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        color: #111 !important;
+        box-shadow: none !important;
+      }
+      .timeline-section {
+        border-left: 2px solid #6366f1 !important;
+      }
+      .timeline-dot {
+        background: #6366f1 !important;
+      }
+      .timeline-period, .tag {
+        background: #f1f5f9 !important;
+        color: #334155 !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      .section {
+        padding: 1rem 0 !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #111 !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation Header -->
@@ -42,47 +77,47 @@
             <h1 class="section-title">Danica Flores</h1>
             <p class="section-desc" style="margin-top: 0.4rem; color: var(--text-secondary);">
               Baton Rouge, LA &bull; (570) 236-3654 &bull; 
-              <a href="mailto:danicaflores1128@gmail.com" style="color: var(--green-light); text-decoration: underline;">danicaflores1128@gmail.com</a> &bull;
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color: var(--green-light);">LinkedIn</a> &bull;
-              <a href="https://tiktok.com/@earth222danii" target="_blank" rel="noopener noreferrer" style="color: var(--green-light);">TikTok (@earth222danii)</a>
+              <a href="mailto:danicaflores1128@gmail.com" style="color: var(--accent);">danicaflores1128@gmail.com</a> &bull;
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">LinkedIn</a> &bull;
+              <a href="https://tiktok.com/@earth222danii" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">TikTok (@earth222danii)</a>
             </p>
           </div>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <a href="mailto:danicaflores1128@gmail.com?subject=Opportunity%20Inquiry%20-%20Danica%20Flores" class="btn btn-primary" id="hire-me-btn">
               Get in Touch
             </a>
-            <button onclick="window.print()" class="btn btn-cream" id="print-resume-btn" type="button">
+            <button onclick="window.print()" class="btn btn-secondary" id="print-resume-btn" type="button">
               &#128438; Print / Save PDF
             </button>
           </div>
         </div>
 
         <!-- Quick Summary Bar -->
-        <div class="stats-card" style="margin-bottom: 3.5rem;">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.75rem; text-align: center;">
+        <div class="card" style="margin-bottom: 3rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.08) 100%); border-color: rgba(99, 102, 241, 0.25);">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1.5rem; text-align: center;">
             <div>
-              <div class="stat-number">3.8</div>
-              <div class="stat-label">LSU Accounting GPA</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: #fff;">3.8</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">LSU GPA</div>
             </div>
             <div>
-              <div class="stat-number green">May 2028</div>
-              <div class="stat-label">Expected Graduation</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: #fff;">May 2028</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Expected Graduation</div>
             </div>
             <div>
-              <div class="stat-number">3+ Years</div>
-              <div class="stat-label">Work Experience</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: #fff;">3+ Years</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Experience</div>
             </div>
             <div>
-              <div class="stat-number cream">3 Languages</div>
-              <div class="stat-label">Tagalog, Spanish, English</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: #fff;">3 Languages</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Tagalog, Spanish, English</div>
             </div>
           </div>
         </div>
 
-        <div class="grid grid-2" style="align-items: start; gap: 3.25rem;">
+        <div class="grid grid-2" style="align-items: start; gap: 3rem;">
           <!-- Left Column: Work Experience -->
           <div>
-            <h2 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--cream-100);">
+            <h2 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
               <span>&#128188;</span> Work Experience
             </h2>
 
@@ -111,7 +146,7 @@
                   <h3 class="timeline-role">Content Creator / Influencer</h3>
                   <span class="timeline-period">May 2025 &mdash; Present</span>
                 </div>
-                <div class="timeline-company">TikTok (<a href="https://tiktok.com/@earth222danii" target="_blank" rel="noopener noreferrer" style="color: var(--green-light); text-decoration: underline;">@earth222danii</a>)</div>
+                <div class="timeline-company">TikTok (<a href="https://tiktok.com/@earth222danii" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">@earth222danii</a>)</div>
                 <ul class="timeline-bullets">
                   <li>Grew a dedicated following on TikTok by producing authentic, trend-driven lifestyle and beauty content using CapCut and Canva to ensure engaging visuals and consistent branding.</li>
                   <li>Partnered with prominent skincare brands such as <strong>Good Molecules</strong> and <strong>Bubble</strong> to create sponsored content campaigns that highlighted product benefits while maintaining audience trust and relatability.</li>
@@ -160,7 +195,7 @@
           <div>
             <!-- Education Section -->
             <div>
-              <h2 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--cream-100);">
+              <h2 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
                 <span>&#127891;</span> Education
               </h2>
               <div class="card" style="margin-bottom: 2rem;">
@@ -168,12 +203,12 @@
                   <h3 class="timeline-role">Louisiana State University (LSU)</h3>
                   <span class="timeline-period">May 2028</span>
                 </div>
-                <div class="timeline-company" style="color: var(--green-light); font-weight: 700;">
+                <div class="timeline-company" style="color: var(--accent); font-weight: 700;">
                   Bachelor of Science in Accounting &bull; GPA: 3.8
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.35rem;">Baton Rouge, LA</p>
-                <div style="margin-top: 1rem; border-top: 1px solid var(--cream-border-subtle); padding-top: 0.85rem;">
-                  <strong style="color: var(--cream-200); font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Related Coursework:</strong>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">Baton Rouge, LA</p>
+                <div style="margin-top: 1rem; border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
+                  <strong style="color: var(--text-main); font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">Related Coursework:</strong>
                   <div class="project-tags" style="margin-bottom: 0;">
                     <span class="tag">Information Systems Data Statistics</span>
                     <span class="tag">Microeconomics</span>
@@ -186,7 +221,7 @@
 
             <!-- Skills & Competencies -->
             <div>
-              <h2 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--cream-100);">
+              <h2 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
                 <span>&#9881;</span> Skills & Expertise
               </h2>
 
@@ -195,9 +230,9 @@
                 <div class="skill-category">
                   <h4>Spoken Languages</h4>
                   <div class="project-tags" style="margin-bottom: 0;">
-                    <span class="tag accent-tag">Tagalog</span>
-                    <span class="tag accent-tag">Spanish</span>
-                    <span class="tag accent-tag">English</span>
+                    <span class="tag" style="background: rgba(56, 189, 248, 0.15); color: #fff;">Tagalog</span>
+                    <span class="tag" style="background: rgba(56, 189, 248, 0.15); color: #fff;">Spanish</span>
+                    <span class="tag" style="background: rgba(56, 189, 248, 0.15); color: #fff;">English</span>
                   </div>
                 </div>
 
@@ -243,7 +278,7 @@
 
             <!-- Honors & Scholarships -->
             <div class="card" style="margin-top: 1.5rem;">
-              <h3 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--cream-100); display: flex; align-items: center; gap: 0.4rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-main); display: flex; align-items: center; gap: 0.4rem;">
                 <span>&#127941;</span> Honors & Scholarships
               </h3>
               <ul style="color: var(--text-secondary); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -255,7 +290,7 @@
 
             <!-- Extracurricular Activities & Leadership -->
             <div class="card" style="margin-top: 1.5rem;">
-              <h3 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--cream-100); display: flex; align-items: center; gap: 0.4rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-main); display: flex; align-items: center; gap: 0.4rem;">
                 <span>&#129309;</span> Leadership & Community Activities
               </h3>
               <ul style="color: var(--text-secondary); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -274,7 +309,7 @@
   <!-- Footer -->
   <footer class="site-footer" id="footer">
     <div class="container footer-content">
-      <p class="footer-text">&copy; 2026 Danica Flores. Baton Rouge, LA &bull; LSU Accounting Class of 2028.</p>
+      <p class="footer-text">&copy; 2026 Danica Flores. Baton Rouge, LA.</p>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="project.html">Projects</a>
